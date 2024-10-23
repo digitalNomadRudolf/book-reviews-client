@@ -18,10 +18,24 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-off-white font-raleway;
+}
+
+/* Global styles including custom styles for dropdown items */
+.dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:visited {
+  background-color: #3a7ca5 !important; /* Ensure no background on click */
+}
+
+.carousel-item * {
+  pointer-events: auto;
+}
+
+.quote-carousel-item .carousel-item {
+  transition: opacity 1s ease-in-out;
+}
+
+.quote-carousel-item .carousel-item.hidden {
+  opacity: 0;
 }
